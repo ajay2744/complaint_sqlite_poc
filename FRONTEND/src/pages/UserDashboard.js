@@ -61,9 +61,10 @@ function UserDashboard() {
     const fetchComplaints = () => {
 
         fetch(
-            `http://127.0.0.1:8000/complaints/user/${user_id}`
+            // `http://127.0.0.1:8000/complaints/user/${user_id}`
 
             // "https://dude-subtly-motician.ngrok-free.dev/complaints/user/" + user_id
+            "https://complaint-sqlite-poc-3.onrender.com/complaints/user/" + user_id
         )
         .then(res => res.json())
         .then(data => {
@@ -168,9 +169,9 @@ function UserDashboard() {
             const response =
                 await fetch(
 
-                "http://127.0.0.1:8000/complaints",
+                // "http://127.0.0.1:8000/complaints",
 
-                // "https://dude-subtly-motician.ngrok-free.dev/complaints",
+                "https://complaint-sqlite-poc-3.onrender.com/complaints",
 
                 {
                     method: "POST",
@@ -455,9 +456,10 @@ function UserDashboard() {
 
                                         <img
                                             src={
-                                                `http://127.0.0.1:8000/uploads/${c.image_path}`
+                                                // `http://127.0.0.1:8000/uploads/${c.image_path}`
 
                                                 // "https://dude-subtly-motician.ngrok-free.dev/uploads/" + c.image_path
+                                                "https://complaint-sqlite-poc-3.onrender.com/uploads/" + c.image_path
                                             }
 
                                             alt="complaint"

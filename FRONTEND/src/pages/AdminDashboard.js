@@ -60,9 +60,10 @@ function AdminDashboard() {
     const fetchComplaints = () => {
 
         fetch(
-            "http://127.0.0.1:8000/complaints",
+            // "http://127.0.0.1:8000/complaints",
 
-            // "https://dude-subtly-motician.ngrok-free.dev/complaints"
+            // "https://dude-subtly-motician.ngrok-free.dev/complaints",
+            "https://complaint-sqlite-poc-3.onrender.com/complaints"
         )
         .then(res => res.json())
 
@@ -161,9 +162,11 @@ function AdminDashboard() {
 
             await fetch(
 
-                `http://127.0.0.1:8000/complaints/${complaintId}?status=${status}`,
+                // `http://127.0.0.1:8000/complaints/${complaintId}?status=${status}`,
 
                 // "https://dude-subtly-motician.ngrok-free.dev/complaints/" + complaintId + "?status=" + status,
+
+                "https://complaint-sqlite-poc-3.onrender.com/complaints/" + complaintId + "?status=" + status,
 
                 {
                     method: "PUT"
@@ -389,9 +392,10 @@ function AdminDashboard() {
 
                                         <img
                                             src={
-                                                `http://127.0.0.1:8000/uploads/${c.image_path}`
+                                                // `http://127.0.0.1:8000/uploads/${c.image_path}`
 
                                                 // "https://dude-subtly-motician.ngrok-free.dev/uploads/" + c.image_path
+                                                "https://complaint-sqlite-poc-3.onrender.com/uploads/" + c.image_path
                                             }
 
                                             alt="complaint"

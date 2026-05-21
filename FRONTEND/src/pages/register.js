@@ -42,8 +42,9 @@ function Register() {
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:8000/register",
+                // "http://127.0.0.1:8000/register",
                 // "https://dude-subtly-motician.ngrok-free.dev/register",
+                "https://complaint-sqlite-poc-3.onrender.com/register",
                 {
                     method: "POST",
 
